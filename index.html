@@ -1,13 +1,214 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Page</title>
+    <title>FinTech Masters - 미래 금융의 리더가 되세요</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+            color: white;
+            padding: 1.5rem;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #64b5f6;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(26, 35, 126, 0.9), rgba(13, 71, 161, 0.9)), url('/api/placeholder/1920/1080') center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #ffd700;
+            color: #1a237e;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .features {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            color: #1a237e;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My GitHub Page</h1>
-    <p>This is a simple HTML page hosted on GitHub.</p>
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="logo">FinTech Masters</a>
+            <div class="nav-links">
+                <a href="#features">커리큘럼</a>
+                <a href="#pricing">수강료</a>
+                <a href="#contact">문의하기</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>현재 핀테크의 리더가 되세요</h1>
+            <p>블록체인, 디지털 자산, 금융 AI까지.<br>실무 전문가들과 함께 최신 핀테크 기술을 마스터하세요.</p>
+            <a href="#" class="cta-button">무료 체험강의 신청하기</a>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>실무 중심 커리큘럼</h3>
+                <p>현업 전문가들이 설계한 실전 프로젝트로 실무 역량을 키웁니다. 최신 트렌드를 반영한 케이스 스터디를 통해 실제 현장에서 필요한 스킬을 익힐 수 있습니다.</p>
+            </div>
+            <div class="feature-card">
+                <h3>블록체인 & 디지털 자산</h3>
+                <p>블록체인 기술의 기초부터 응용까지, 스마트 컨트랙트 개발과 디지털 자산 운용 전략을 배웁니다. 실제 프로젝트를 통해 실무 경험을 쌓을 수 있습니다.</p>
+            </div>
+            <div class="feature-card">
+                <h3>금융 AI & 데이터 분석</h3>
+                <p>머신러닝을 활용한 금융 데이터 분석, 리스크 관리, 자동화 트레이딩 시스템 구축 등 실무에서 활용 가능한 AI 기술을 학습합니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // 페이지 로드 시 애니메이션
+        document.addEventListener('DOMContentLoaded', () => {
+            anime({
+                targets: '.hero h1',
+                opacity: [0, 1],
+                translateY: [20, 0],
+                duration: 1000,
+                easing: 'easeOutExpo'
+            });
+
+            anime({
+                targets: '.hero p',
+                opacity: [0, 1],
+                translateY: [20, 0],
+                duration: 1000,
+                delay: 200,
+                easing: 'easeOutExpo'
+            });
+
+            anime({
+                targets: '.cta-button',
+                opacity: [0, 1],
+                translateY: [20, 0],
+                duration: 1000,
+                delay: 400,
+                easing: 'easeOutExpo'
+            });
+        });
+    </script>
 </body>
 </html>
